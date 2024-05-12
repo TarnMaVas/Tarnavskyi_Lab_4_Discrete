@@ -212,7 +212,7 @@ class FSM:
 
                 else:
 
-                    cool_print(random.choice(RESTING_PHRASES))
+                    cool_print(hour, random.choice(RESTING_PHRASES))
 
 
     def __setup_study(self):
@@ -334,6 +334,8 @@ def day_simulation(days: int = 1):
     Function that simulates a given number of my days.
     '''
     fsm = FSM()
+    
+    print(f'Starting the simulation of {days} day{"s" if days > 1 else ""}...\n')
 
     for hour in list(range(24)) * days:
 
